@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cabin</title>
+    <meta name="description" content="Cabin static site generator">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="./images/cabin.png">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <div class="ribbon-wrapper"><a href="https://github.com/colinwren/Cabin" class="github-ribbon"><span>Fork me on GitHub</span></a></div><img src="./images/cabinpic.png" class="backdrop">
+    <header class="group">
+      <h1 class="title">Cabin</h1>
+      <h2 class="sub-title">Static site generator powered by <a href="http://gruntjs.com/">Grunt</a></h2>
+    </header>
+    <div class="content-center">
+      <div class="text-wrapper"><a name="getting-started" class="anchor" href="#getting-started"><h1>Getting started</h1>
+</a><p>First install Cabin and Grunt globally with the following command:</p>
+<pre><code class="lang-bash"><div class="highlight"><pre>npm install -g cabin grunt-cli
+</pre></div>
+</code></pre>
+<p>You can then scaffold a static generator with the following command:</p>
+<pre><code class="lang-bash"><div class="highlight"><pre>cabin new myBlog colinwren/Candy
+</pre></div>
+</code></pre>
+<p>The first parameter is the name of the destination folder, and the second is the GitHub username and repository name of a <code>theme</code> to use for the site. If the <code>theme</code> parameter is left blank, the <a href="https://github.com/colinwren/Candy">default theme</a> will be used.</p>
+<p>After scaffolding a site generator, you can run it by entering the project directory and running grunt with this command:</p>
+<pre><code class="lang-bash"><div class="highlight"><pre><span class="nb">cd </span>myBlog <span class="o">&amp;&amp;</span> grunt
+</pre></div>
+</code></pre>
+<p>This will build your site, start a static file server, open a browser tab with the site&#39;s homepage, and start a watch process to rebuild your site when your source files change. Try editing or creating a new markdown file in the <code>posts</code> folder (if you are using the default theme) and upon save your site will be automatically rebuilt. When your site has been rebuilt, your browser will automatically refresh with your updated site.</p>
+<a name="themes" class="anchor" href="#themes"><h1>Themes</h1>
+</a><p>Cabin themes provide styling and structure for your static site project. They work great out of the box and as starting points for more customized sites.</p>
+<a name="featured-themes" class="anchor" href="#featured-themes"><h2>Featured themes</h2>
+</a><p><a class="theme-wrapper group" href="http://colinwren.github.io/Candy/">
+  <span class="theme-name">Candy</span>
+  <img class="theme-img" src="./images/Candy.png"/>
+</a></p>
+<p><a class="theme-wrapper group" href="http://colinwren.github.io/Blok/">
+  <img class="theme-img" src="./images/Blok.png"/>
+  <span class="theme-name">Blok</span>
+</a></p>
+<a name="creating-themes" class="anchor" href="#creating-themes"><h2>Creating Themes</h2>
+</a><a name="configuration" class="anchor" href="#configuration"><h3>Configuration</h3>
+</a><p>The only file explicitly required is a <code>cabin.json</code> configuration in the root of the repo. This file describes what CSS preprocessors and template languages that your theme supports as well as the configuration for <a href="https://github.com/ChrisWren/grunt-pages">grunt-pages</a>. We currently support EJS and Jade templates and the Sass and LESS style languages.</p>
+<p>Here is an example <code>cabin.json</code> file which states that the project supports Sass, Jade, and has the specified config for the grunt-pages task:</p>
+<pre><code class="lang-json"><div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;style&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Sass&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Jade&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;gruntPages&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;posts&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="s2">&quot;posts&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;dest&quot;</span><span class="p">:</span> <span class="s2">&quot;dist&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;src/layouts/post.jade&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;blog/posts/:title&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</code></pre>
+<p><strong>Note: the configuration of the cabin.json must have <code>dist</code> as the destination folder and the theme files must match the folder structure described below.</strong></p>
+<a name="theme-file-locations" class="anchor" href="#theme-file-locations"><h3>Theme file locations</h3>
+</a><p>Your theme must conform to the following folder structure in order to work with the Gruntfile that Cabin generates.</p>
+<pre><code><div class="highlight"><pre><span class="err">├──</span> <span class="nx">README</span><span class="p">.</span><span class="nx">md</span>
+<span class="err">├──</span> <span class="nx">cabin</span><span class="p">.</span><span class="nx">json</span>
+<span class="err">├──</span> <span class="nx">posts</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="nx">Sample</span> <span class="nx">posts</span>
+<span class="err">├──</span> <span class="nx">site</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="nx">Generated</span> <span class="nx">site</span> <span class="nx">files</span>
+<span class="err">└──</span> <span class="nx">src</span>
+    <span class="err">├──</span> <span class="nx">images</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="nx">Theme</span> <span class="nx">image</span> <span class="nx">files</span>
+    <span class="err">├──</span> <span class="nx">layouts</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="nx">Theme</span> <span class="nx">layout</span> <span class="nx">templates</span>
+    <span class="err">├──</span> <span class="nx">pages</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="nx">Theme</span> <span class="nx">page</span> <span class="nx">templates</span>
+    <span class="err">└──</span> <span class="nx">styles</span>
+        <span class="err">└──</span> <span class="nx">Theme</span> <span class="nx">stylesheets</span>
+</pre></div>
+</code></pre>
+<p>The best way to learn about how to develop a theme is by referencing the <a href="https://github.com/colinwren/Candy">default theme</a>.</p>
+<a name="changelog" class="anchor" href="#changelog"><h1>Changelog</h1>
+</a><p><strong>0.1.2</strong> - Built-in LiveReload functionality added.</p>
+<p><strong>0.1.1</strong> - The Gruntfile now copies fonts from the src/styles/fonts folder.</p>
+<p><strong>0.1.0</strong> - <code>grunt server</code> is now the default task. The Gruntfile template now copys images, vanilla css, and scripts and no longer copies .ico and .htaccess files.</p>
+<p><strong>0.0.2</strong> - Use git clone instead of downloading theme zips from GitHub repos.</p>
+<p><strong>0.0.1</strong> - Only copy specified file extensions from themes.</p>
+<p><strong>0.0.0</strong> - Initial push.</p>
+
+      </div>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-34596567-3', 'colinwren.github.io');
+      ga('send', 'pageview');
+      
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
