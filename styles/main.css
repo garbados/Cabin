@@ -756,19 +756,19 @@ table {
   width: 100%;
 }
 
-/* line 23, ../../src/styles/main.scss */
+/* line 27, ../../src/styles/main.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 27, ../../src/styles/main.scss */
+/* line 31, ../../src/styles/main.scss */
 html {
   background: #d1d1d1;
 }
 
-/* line 31, ../../src/styles/main.scss */
+/* line 35, ../../src/styles/main.scss */
 body {
   position: relative;
   max-width: 1600px;
@@ -781,13 +781,13 @@ body {
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1000px) {
-  /* line 31, ../../src/styles/main.scss */
+  /* line 35, ../../src/styles/main.scss */
   body {
     font-size: 14px;
   }
 }
 
-/* line 45, ../../src/styles/main.scss */
+/* line 49, ../../src/styles/main.scss */
 header {
   position: relative;
   z-index: 101;
@@ -797,7 +797,7 @@ header {
   text-shadow: 2px 2px black;
 }
 
-/* line 54, ../../src/styles/main.scss */
+/* line 58, ../../src/styles/main.scss */
 .title {
   margin: 0;
   padding: 1.1em 0 0.2em;
@@ -805,7 +805,7 @@ header {
   font-size: 9em;
 }
 
-/* line 61, ../../src/styles/main.scss */
+/* line 65, ../../src/styles/main.scss */
 .sub-title {
   position: relative;
   z-index: 101;
@@ -813,28 +813,28 @@ header {
   font-size: 3em;
   text-align: center;
 }
-/* line 68, ../../src/styles/main.scss */
+/* line 72, ../../src/styles/main.scss */
 .sub-title a {
   text-decoration: none;
   color: #e58634;
 }
-/* line 72, ../../src/styles/main.scss */
+/* line 76, ../../src/styles/main.scss */
 .sub-title a:hover {
   text-decoration: underline;
 }
 
-/* line 78, ../../src/styles/main.scss */
+/* line 82, ../../src/styles/main.scss */
 .video-wrapper {
   margin: 0px 0px 60px;
 }
-/* line 81, ../../src/styles/main.scss */
+/* line 85, ../../src/styles/main.scss */
 .video-wrapper iframe {
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* line 86, ../../src/styles/main.scss */
+/* line 90, ../../src/styles/main.scss */
 .backdrop {
   position: fixed;
   max-width: 1600px;
@@ -843,20 +843,20 @@ header {
   z-index: 100;
 }
 
-/* line 94, ../../src/styles/main.scss */
+/* line 98, ../../src/styles/main.scss */
 .text-wrapper {
   background: white;
   padding: 10px 30px;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
-/* line 100, ../../src/styles/main.scss */
+/* line 104, ../../src/styles/main.scss */
 .text-wrapper > pre {
   margin: 0 -30px;
 }
 
-/* line 105, ../../src/styles/main.scss */
+/* line 109, ../../src/styles/main.scss */
 .content-center {
   position: relative;
   z-index: 101;
@@ -865,32 +865,32 @@ header {
   margin: 0 auto 2em;
 }
 @media (max-width: 1000px) {
-  /* line 105, ../../src/styles/main.scss */
+  /* line 109, ../../src/styles/main.scss */
   .content-center {
     width: 92%;
     margin-left: 4%;
   }
 }
-/* line 117, ../../src/styles/main.scss */
+/* line 121, ../../src/styles/main.scss */
 .content-center p {
   line-height: 1.4em;
   font-size: 1em;
 }
-/* line 122, ../../src/styles/main.scss */
+/* line 126, ../../src/styles/main.scss */
 .content-center .anchor {
   color: black;
 }
-/* line 126, ../../src/styles/main.scss */
+/* line 130, ../../src/styles/main.scss */
 .content-center a {
   color: #41adec;
   text-decoration: none;
 }
-/* line 130, ../../src/styles/main.scss */
+/* line 134, ../../src/styles/main.scss */
 .content-center a:hover {
   text-decoration: underline;
 }
 
-/* line 136, ../../src/styles/main.scss */
+/* line 140, ../../src/styles/main.scss */
 p code {
   background: #ebebff;
   border: 1px solid #e6e6e6;
@@ -903,61 +903,61 @@ p code {
   border-radius: 3px;
 }
 
-/* line 144, ../../src/styles/main.scss */
+/* line 148, ../../src/styles/main.scss */
 code {
   margin: 0;
   padding: 0;
   font-family: Consolas, "Lucida Console", monospace;
 }
 
-/* line 150, ../../src/styles/main.scss */
+/* line 154, ../../src/styles/main.scss */
 pre {
   font-family: Consolas, "Lucida Console", monospace;
   overflow: auto;
 }
 
-/* line 155, ../../src/styles/main.scss */
+/* line 159, ../../src/styles/main.scss */
 .highlight {
   font-size: 1.1em;
   line-height: 1.5em;
   background-color: #363636;
   color: #c9c9c9;
 }
-/* line 161, ../../src/styles/main.scss */
+/* line 165, ../../src/styles/main.scss */
 .highlight pre {
   padding: 25px;
 }
 
-/* line 166, ../../src/styles/main.scss */
+/* line 170, ../../src/styles/main.scss */
 blockquote {
   border-left: 4px solid #dedede;
   padding: 0 15px;
   color: #787878;
 }
 
-/* line 172, ../../src/styles/main.scss */
+/* line 176, ../../src/styles/main.scss */
 .theme-wrapper {
   width: 100%;
   margin: 30px 0;
   display: block;
   position: relative;
   cursor: pointer;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
-/* line 180, ../../src/styles/main.scss */
+/* line 184, ../../src/styles/main.scss */
 .theme-wrapper:hover .theme-name {
   background: rgba(70, 116, 156, 0.95);
 }
 
-/* line 185, ../../src/styles/main.scss */
+/* line 189, ../../src/styles/main.scss */
 .theme-img {
   width: 100%;
   float: right;
 }
 
-/* line 190, ../../src/styles/main.scss */
+/* line 194, ../../src/styles/main.scss */
 .theme-name {
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
@@ -973,7 +973,7 @@ blockquote {
   transition: all 0.24s ease-out;
 }
 
-/* line 202, ../../src/styles/main.scss */
+/* line 206, ../../src/styles/main.scss */
 .ribbon-wrapper {
   overflow: hidden;
   position: absolute;
@@ -983,7 +983,7 @@ blockquote {
   width: 200px;
 }
 
-/* line 211, ../../src/styles/main.scss */
+/* line 215, ../../src/styles/main.scss */
 .github-ribbon {
   font-size: .8em;
   position: absolute;
@@ -992,12 +992,12 @@ blockquote {
   right: -3.5em;
   padding: 0.6em 3.6em;
   font-weight: 700;
-  background: #4b3539;
+  background: #87172c;
   color: white;
   text-decoration: none;
-  -webkit-box-shadow: 2px 2px 0 #2d2022;
-  -moz-box-shadow: 2px 2px 0 #2d2022;
-  box-shadow: 2px 2px 0 #2d2022;
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   text-shadow: 1px 1px black;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -1005,18 +1005,18 @@ blockquote {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 226, ../../src/styles/main.scss */
+/* line 230, ../../src/styles/main.scss */
 .github-ribbon:hover {
   text-decoration: underline;
 }
 @media (max-width: 630px) {
-  /* line 211, ../../src/styles/main.scss */
+  /* line 215, ../../src/styles/main.scss */
   .github-ribbon {
     display: none;
   }
 }
 
-/* line 236, ../../src/styles/main.scss */
+/* line 240, ../../src/styles/main.scss */
 .group:after {
   content: "";
   display: table;
