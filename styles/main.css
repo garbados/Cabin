@@ -851,8 +851,12 @@ header {
   -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
 }
-
 /* line 100, ../../src/styles/main.scss */
+.text-wrapper > pre {
+  margin: 0 -30px;
+}
+
+/* line 105, ../../src/styles/main.scss */
 .content-center {
   position: relative;
   z-index: 101;
@@ -861,33 +865,29 @@ header {
   margin: 0 auto 2em;
 }
 @media (max-width: 1000px) {
-  /* line 100, ../../src/styles/main.scss */
+  /* line 105, ../../src/styles/main.scss */
   .content-center {
     width: 92%;
     margin-left: 4%;
   }
 }
-/* line 112, ../../src/styles/main.scss */
+/* line 117, ../../src/styles/main.scss */
 .content-center p {
   line-height: 1.4em;
   font-size: 1em;
 }
-/* line 117, ../../src/styles/main.scss */
+/* line 122, ../../src/styles/main.scss */
 .content-center .anchor {
   color: black;
 }
-/* line 121, ../../src/styles/main.scss */
+/* line 126, ../../src/styles/main.scss */
 .content-center a {
   color: #41adec;
   text-decoration: none;
 }
-/* line 125, ../../src/styles/main.scss */
+/* line 130, ../../src/styles/main.scss */
 .content-center a:hover {
   text-decoration: underline;
-}
-/* line 131, ../../src/styles/main.scss */
-.content-center > pre {
-  margin: 0 -30px;
 }
 
 /* line 136, ../../src/styles/main.scss */
