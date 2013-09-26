@@ -7,6 +7,9 @@ ddoc = {
     from: '',
     to: '/index.html'
   },{
+    from: 'posts/:post',
+    to: '/posts/:post/index.html'
+  },{
     from: '*',
     to: '/*'
   }],
